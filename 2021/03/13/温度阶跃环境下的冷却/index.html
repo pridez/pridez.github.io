@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="温度随时间变化环境下的冷却, 创趣工厂">
+    <meta name="keywords" content="温度阶跃环境下的冷却, 创趣工厂">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>温度随时间变化环境下的冷却 | 创趣工厂</title>
+    <title>温度阶跃环境下的冷却 | 创趣工厂</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">温度随时间变化环境下的冷却</h1>
+                    <h1 class="description center-align post-title">温度阶跃环境下的冷却</h1>
                 </div>
             </div>
         </div>
@@ -462,7 +462,7 @@
                 <p>基于【Modelica】                                                                                                                                   </p>
 <h1 id="温度阶跃环境下的冷却"><a href="#温度阶跃环境下的冷却" class="headerlink" title="温度阶跃环境下的冷却"></a><strong>温度阶跃环境下的冷却</strong></h1><h2 id="1、coded-program"><a href="#1、coded-program" class="headerlink" title="1、coded program"></a>1、coded program</h2><p>model NewtonCoolingDynamic<br>  “Cooling example with fluctuating ambient conditions”<br>// Types<br>  type Temperature=Real(unit=”K”,min=0);<br>  type ConvectionCoefficient=Real(unit=”W/(m2.K)”, min=0);<br>  type Area=Real(unit=”m2”, min=0);<br>  type Mass=Real(unit=”kg”, min=0);<br>  type SpecificHeat=Real(unit=”J/(K.kg)”, min=0);<br>// Parameters<br>parameter Temperature T0=363.15 “Initial temperature”;<br>parameter ConvectionCoefficient h=0.7 “Convective cooling coefficient”;<br>parameter Area A=1.0 “Surface area”;<br>parameter Mass m=0.1 “Mass of thermal capacitance”;<br>parameter SpecificHeat c_p=1.2 “Specific heat”;<br>// Variables<br>Temperature T_inf “Ambient temperature”;<br>Temperature T “Temperature”;</p>
 <p>initial equation<br>T = T0 “Specify initial value for T”;<br>equation<br>if time&lt;=0.5 then<br>T_inf = 298.15-20*(time-0.5)  “Constant temperature when time&lt;=0.5”;<br>else<br>T_inf = 150 “Otherwise, increasing”;<br>end if;<br>m<em>c_p</em>der(T) = h<em>A</em>(T_inf-T) “Newton’s law of cooling”;<br>end NewtonCoolingDynamic;</p>
-<h2 id="2、result-picture"><a href="#2、result-picture" class="headerlink" title="2、result picture"></a>2、result picture</h2><p><img src="C:\Users\15892\Desktop\阶跃图片.png"></p>
+<h2 id="2、result-picture"><a href="#2、result-picture" class="headerlink" title="2、result picture"></a>2、result picture</h2><p><img src="https://raw.githubusercontent.com/Github/pridez/Picbed_Picgo/main/jieyuetupiannew.png"></p>
 
                 
             </div>
@@ -703,9 +703,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="温度随时间变化环境下的冷却">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="温度阶跃环境下的冷却">
                         
-                        <span class="card-title">温度随时间变化环境下的冷却</span>
+                        <span class="card-title">温度阶跃环境下的冷却</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
